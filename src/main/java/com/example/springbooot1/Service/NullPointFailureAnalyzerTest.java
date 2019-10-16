@@ -12,6 +12,6 @@ public class NullPointFailureAnalyzerTest {
     }
 
     public void methodA(){
-        System.out.println("这是我A的专属方法");
+        System.out.println("这是方法");
     }
 }
