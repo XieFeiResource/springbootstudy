@@ -18,4 +18,8 @@ public class NullPointFailureAnalyzerTest {
     public void methodB(){
         System.out.println("decelop来啦");
     }
+
+    public void methodC(){
+        System.out.println("提交到develop分支的代码");
+    }
 }
