@@ -10,4 +10,8 @@ public class NullPointFailureAnalyzerTest {
         Integer a = null;
 //        System.out.println(a.equals("88"));
     }
+
+    public void methodA(){
+        System.out.println("这是我A的专属方法");
+    }
 }
