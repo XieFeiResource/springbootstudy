@@ -14,4 +14,5 @@ public class NullPointFailureAnalyzerTest {
     public void methodA(){
         System.out.println("这是方法");
     }
+
 }
