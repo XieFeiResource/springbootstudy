@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbooot1.Mapper.StuMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="stu_course" type="com.example.springbooot1.VO.StuVo">
+		<id column="stu_id" property="stuId"/>
+		<result column="stu_name" property="stuName"/>
+		<result column="stu_age" property="stuAge"/>
+		<collection property="courses" ofType="com.example.springbooot1.Entity.Course">
+			<id column="c_id" property="cId"/>
+			<result column="c_name" property="cName"/>
+			<result column="c_grade" property="cGrade"/>
+		</collection>
+	</resultMap>
+
+	<!--关联查询部门列表-->
+	<select id="listStuAndCourse" resultMap="stu_course">
+		select * from stu
+			left join course on stu.stu_id=course.stu_id
+	</select>
+</mapper>

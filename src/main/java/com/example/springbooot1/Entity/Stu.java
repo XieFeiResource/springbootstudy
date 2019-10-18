@@ -18,5 +18,4 @@ public class Stu extends Model<Stu> {
 
     private int stuAge;
 
-    private int stuCourse;
 }

@@ -14,7 +14,9 @@ public class Course extends Model<Course> {
     @TableId
     private int cId;
 
-    private String Cname;
+    private String cName;
 
     private int cGrade;
+
+    private int stuId;
 }
