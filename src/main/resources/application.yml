@@ -25,3 +25,5 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 #    schema://启动项目时自动执行sql语句
 #      - classpath:department.sql
+server:
+  port: 8989
