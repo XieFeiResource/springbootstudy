@@ -1,7 +1,6 @@
 package com.example.springbooot1.Config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +10,7 @@ import java.util.Properties;
 
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.qfclo.login.mapper")
+@MapperScan("com.example.springbooot1.Mapper")
 public class MybatisPlusConfig {
     /**
      * 分页插件
@@ -23,7 +22,7 @@ public class MybatisPlusConfig {
     /**
      * 打印 sql
      */
-    @Bean
+    /*@Bean
     public PerformanceInterceptor PerformanceInterceptorperformanceInterceptor() {
         PerformanceInterceptor performanceInterceptor =new PerformanceInterceptor();
         //格式化sql语句
@@ -31,5 +30,5 @@ public class MybatisPlusConfig {
         properties.setProperty("format", "faalse");
         performanceInterceptor.setProperties(properties);
         return performanceInterceptor;
-    }
+    }*/
 }

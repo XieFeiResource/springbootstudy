@@ -1,5 +1,6 @@
 package com.example.springbooot1.Service.impl;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.springbooot1.Entity.Stu;
 import com.example.springbooot1.Mapper.StuMapper;
@@ -13,7 +14,7 @@ import java.util.List;
 public class StuServiceImpl extends ServiceImpl<StuMapper,Stu> implements StuService {
 
     @Override
-    public List<StuVo> listStuAndCourse() {
-        return baseMapper.listStuAndCourse();
+    public Page<StuVo> listStuAndCourse(Page<StuVo> page) {
+        return page.setRecords(baseMapper.listStuAndCourse(page));
     }
 }

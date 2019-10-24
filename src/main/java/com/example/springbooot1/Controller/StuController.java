@@ -8,9 +8,7 @@ import com.example.springbooot1.Service.StuService;
 import com.example.springbooot1.VO.StuVo;
 import io.swagger.annotations.*;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -47,7 +45,7 @@ public class StuController {
             @ApiResponse(code = 404, message = "请求路径没有或页面跳转路径不对")
     })
     @GetMapping("/getStuAndCourseList")
-    public List<StuVo> getStuAndCourseList(){
-        return stuService.listStuAndCourse();
+    public Page<StuVo> getStuAndCourseList(@RequestParam Integer page, @RequestParam Integer size){
+        return stuService.listStuAndCourse(new Page<>(page, size));
     }
 }
