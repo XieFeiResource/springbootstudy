@@ -18,5 +18,13 @@
 	<select id="listStuAndCourse" resultMap="stu_course">
 		select * from stu
 			left join course on stu.stu_id=course.stu_id
+		<where>
+			<if test="stuvo.stuName!=null and stuvo.stuName!=''">
+				stu.stu_name like #{stuvo.stuName}
+			</if>
+			<if test="stuvo.stuAge!=null and stuvo.stuAge!=''">
+				stu.stu_age like #{stuvo.stuAge}
+			</if>
+		</where>
 	</select>
 </mapper>

@@ -8,5 +8,5 @@ import com.example.springbooot1.VO.StuVo;
 import java.util.List;
 
 public interface StuService extends IService<Stu> {
-    public Page<StuVo> listStuAndCourse(Page<StuVo> page);
+    public Page<StuVo> listStuAndCourse(Page<StuVo> page,StuVo stuvo);
 }

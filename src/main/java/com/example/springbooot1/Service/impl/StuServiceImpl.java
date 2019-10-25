@@ -14,7 +14,7 @@ import java.util.List;
 public class StuServiceImpl extends ServiceImpl<StuMapper,Stu> implements StuService {
 
     @Override
-    public Page<StuVo> listStuAndCourse(Page<StuVo> page) {
-        return page.setRecords(baseMapper.listStuAndCourse(page));
+    public Page<StuVo> listStuAndCourse(Page<StuVo> page,StuVo stuvo) {
+        return page.setRecords(baseMapper.listStuAndCourse(page,stuvo));
     }
 }
