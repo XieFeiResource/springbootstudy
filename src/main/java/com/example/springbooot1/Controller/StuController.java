@@ -44,8 +44,8 @@ public class StuController {
             @ApiResponse(code = 400, message = "请求参数没填好"),
             @ApiResponse(code = 404, message = "请求路径没有或页面跳转路径不对")
     })
-    @PostMapping("/getStuAndCourseList")
-    public Page<StuVo> getStuAndCourseList(Page<StuVo> page,StuVo stuvo){
-        return stuService.listStuAndCourse(page,stuvo);
+    @GetMapping("/getStuAndCourseList")
+    public Page<StuVo> getStuAndCourseList(Integer currentPage,Integer pageSize){
+        return stuService.listStuAndCourse(new Page<>(currentPage,pageSize));
     }
 }

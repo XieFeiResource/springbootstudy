@@ -15,7 +15,7 @@
 	</resultMap>
 
 	<!--关联查询部门列表-->
-	<select id="listStuAndCourse" resultMap="stu_course">
+	<!--<select id="listStuAndCourse" resultMap="stu_course">
 		select * from stu
 			left join course on stu.stu_id=course.stu_id
 		<where>
@@ -26,5 +26,9 @@
 				stu.stu_age like #{stuvo.stuAge}
 			</if>
 		</where>
-	</select>
+	</select>-->
+    <select id="listStuAndCourse" resultMap="stu_course">
+        select * from stu
+        left join course on stu.stu_id=course.stu_id
+    </select>
 </mapper>
