@@ -12,11 +12,11 @@ import lombok.EqualsAndHashCode;
 public class Course extends Model<Course> {
     private static final long serialVersionUID = 1L;
     @TableId
-    private int cId;
+    private Integer cId;//此处int类型与integer类型区别很大，在接口中接收数据有区别
 
     private String cName;
 
-    private int cGrade;
+    private Integer cGrade;
 
-    private int stuId;
+    private Integer stuId;
 }

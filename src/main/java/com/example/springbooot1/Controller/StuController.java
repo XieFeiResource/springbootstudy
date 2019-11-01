@@ -3,6 +3,7 @@ package com.example.springbooot1.Controller;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.springbooot1.Entity.Course;
 import com.example.springbooot1.Entity.Stu;
 import com.example.springbooot1.Service.StuService;
 import com.example.springbooot1.VO.StuVo;
@@ -47,5 +48,10 @@ public class StuController {
     @GetMapping("/getStuAndCourseList")
     public Page<StuVo> getStuAndCourseList(Integer currentPage,Integer pageSize){
         return stuService.listStuAndCourse(new Page<>(currentPage,pageSize));
+    }
+
+    public List<Course> getCourseList(Course course){
+
+        return null;
     }
 }
